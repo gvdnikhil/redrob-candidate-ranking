@@ -1,0 +1,38 @@
+# Submission metadata — mirrors the portal form fields
+# Fill in YOUR details before pushing to GitHub
+
+team_name: "FILL_YOUR_TEAM_NAME"
+
+primary_contact:
+  name: "Gangula Venkata Durga Nikhil Reddy"
+  email: "gangulreddy@deloitte.com"
+  phone: "FILL_YOUR_PHONE"
+
+github_repository_url: "https://github.com/FILL_USERNAME/FILL_REPO_NAME"
+
+sandbox_demo_link: "FILL_AFTER_COLAB_NOTEBOOK_PUBLISHED"
+
+ai_tools_declared:
+  - Claude   # used for development workflow (Claude Code CLI)
+
+compute_environment:
+  summary: "Windows 11 Enterprise, Python 3.14, CPU only, 16GB RAM"
+  precompute_runtime_sec: 210
+  rank_runtime_sec: 113
+
+team_members:
+  - name: "Gangula Venkata Durga Nikhil Reddy"
+    email: "gangulreddy@deloitte.com"
+
+methodology_summary: >
+  Two-phase hybrid ranking pipeline. Phase A (offline): stream 100k candidates,
+  embed with sentence-transformers/static-retrieval-mrl-en-v1 (3200/sec on CPU),
+  build BM25 index, extract structured features to parquet. Phase B (rank, <2min):
+  dense cosine + BM25 fused via Reciprocal Rank Fusion gives semantic_fit; combined
+  with career_quality (product-company ML months + title class), musthave_evidence
+  (regex over career descriptions for embeddings/vectorDB/eval-fw/python),
+  location_fit, availability_multiplier from 23 redrob signals, and penalties for
+  bad titles and consulting-only careers. Honeypot detection via 7 internal
+  consistency checks (yoe vs career sum, expert+zero-duration skills, date ordering)
+  drives plausibility to ~0. Reasoning is deterministic slot-based, no LLM at rank
+  time, with runtime hallucination validation. All weights in config.py.

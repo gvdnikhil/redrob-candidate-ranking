@@ -1,0 +1,51 @@
+candidate_id,rank,score,reasoning
+CAND_0000031,1,1.15,"6yr Recommendation Systems Engineer at Swiggy (product company); background includes: Owned the offline-online correlation analysis that determined which offline metrics actually predict; key skills: MLflow (assessed 75/100), FAISS (assessed 68/100)."
+CAND_0000014,2,0.72808,"8yr Frontend Engineer at Zomato (product company); key skills: FAISS (assessed 78/100), OpenSearch. Concern: limited evidence of production ML/IR experience."
+CAND_0000038,3,0.62203,7yr Java Developer at Swiggy (product company); key skills: Weaviate.
+CAND_0000015,4,0.61649,"5yr Software Engineer at Razorpay (product company); key skills: PyTorch, Qdrant. Concern: last active 110 days ago."
+CAND_0000011,5,0.58887,"2yr QA Engineer at Pied Piper (product company); key skills: Recommendation Systems (assessed 30/100), Hugging Face Transformers. Concern: last active 134 days ago."
+CAND_0000032,6,0.5695,"8yr .NET Developer at Cognizant (services firm); key skills: Embeddings, Python. Concern: notice period is 150 days."
+CAND_0000001,7,0.5524,"7yr Backend Engineer at Mindtree (services firm); key skills: NLP (assessed 39/100), Fine-tuning LLMs (assessed 42/100). Concern: based outside India (Canada) and not open to relocation."
+CAND_0000048,8,0.54188,10yr Mobile Developer at CRED (product company). Concern: notice period is 120 days.
+CAND_0000023,9,0.5042,4yr Software Engineer at Acme Corp (product company). Concern: based outside India (USA) and not open to relocation.
+CAND_0000010,10,0.50185,"5yr Data Engineer at Ola (product company); background includes: Built our experimentation framework that supports the product team's A/B tests; key skills: Elasticsearch, Python. Concern: notice period is 120 days."
+CAND_0000025,11,0.458,7yr Frontend Engineer at Tech Mahindra (services firm); key skills: LangChain (assessed 40/100). Concern: notice period is 120 days.
+CAND_0000018,12,0.44091,7yr Frontend Engineer at Acme Corp (product company). Concern: notice period is 120 days.
+CAND_0000044,13,0.39463,6yr Frontend Engineer at Tech Mahindra (services firm); key skills: Python. Concern: majority of career is at services firms.
+CAND_0000034,14,0.39234,14yr Business Analyst at Wipro (services firm). Concern: low recruiter response rate (15%).
+CAND_0000043,15,0.3855,"8yr Cloud Engineer at Swiggy (product company); key skills: Elasticsearch, OpenSearch. Concern: notice period is 120 days."
+CAND_0000035,16,0.35661,4yr Full Stack Developer at Globex Inc (product company); key skills: Recommendation Systems. Concern: last active 116 days ago.
+CAND_0000037,17,0.31348,14yr Business Analyst at Stark Industries (product company). Concern: last active 173 days ago.
+CAND_0000027,18,0.28313,"4yr DevOps Engineer at Infosys (services firm); key skills: PEFT (assessed 50/100), Information Retrieval. Concern: majority of career is at services firms."
+CAND_0000021,19,0.2057,"14yr Project Manager at Wipro (services firm); key skills: Recommendation Systems, Fine-tuning LLMs. Concern: last active 193 days ago."
+CAND_0000029,20,0.19936,7yr Business Analyst at Wipro (services firm). Concern: majority of career is at services firms.
+CAND_0000050,21,0.18945,14yr Business Analyst at Infosys (services firm). Concern: last active 223 days ago.
+CAND_0000006,22,0.17715,6yr Business Analyst at Wayne Enterprises (product company). Concern: notice period is 150 days.
+CAND_0000007,23,0.08554,6yr Civil Engineer at Wipro (services firm). Concern: limited evidence of production ML/IR experience.
+CAND_0000026,24,0.08474,7yr Graphic Designer at Initech (product company). Concern: last active 242 days ago.
+CAND_0000045,25,0.06986,12yr Project Manager at Initech (product company). Concern: limited evidence of production ML/IR experience.
+CAND_0000005,26,0.0486,11yr Accountant at Stark Industries (product company). Concern: last active 244 days ago.
+CAND_0000016,27,0.04615,5yr Accountant at Infosys (services firm). Concern: majority of career is at services firms.
+CAND_0000041,28,0.03188,14yr Operations Manager at Hooli (product company). Concern: low recruiter response rate (7%).
+CAND_0000019,29,0.02296,6yr Project Manager at Wayne Enterprises (product company). Concern: limited evidence of production ML/IR experience.
+CAND_0000020,30,0.01621,6yr Mechanical Engineer at Wipro (services firm). Concern: last active 240 days ago.
+CAND_0000030,31,0.00476,10yr Marketing Manager at Dunder Mifflin (product company). Concern: last active 218 days ago.
+CAND_0000002,32,0.0,12yr Operations Manager at Wipro (services firm). Concern: last active 202 days ago.
+CAND_0000003,33,0.0,1yr Customer Support at TCS (services firm). Concern: notice period is 150 days.
+CAND_0000004,34,0.0,4yr Marketing Manager at Dunder Mifflin (product company). Concern: notice period is 120 days.
+CAND_0000008,35,0.0,4yr Operations Manager at Wipro (services firm). Concern: majority of career is at services firms.
+CAND_0000009,36,0.0,11yr Mechanical Engineer at Dunder Mifflin (product company). Concern: notice period is 150 days.
+CAND_0000012,37,0.0,1yr Operations Manager at Stark Industries (product company). Concern: low recruiter response rate (16%).
+CAND_0000013,38,0.0,1yr Civil Engineer at Globex Inc (product company). Concern: based outside India (UAE) and not open to relocation.
+CAND_0000017,39,0.0,12yr Accountant at Wipro (services firm). Concern: last active 210 days ago.
+CAND_0000022,40,0.0,1yr Mechanical Engineer at Hooli (product company). Concern: notice period is 150 days.
+CAND_0000024,41,0.0,8yr HR Manager at TCS (services firm). Concern: majority of career is at services firms.
+CAND_0000028,42,0.0,1yr Operations Manager at Wipro (services firm). Concern: majority of career is at services firms.
+CAND_0000033,43,0.0,9yr Graphic Designer at Wipro (services firm). Concern: low recruiter response rate (8%).
+CAND_0000036,44,0.0,11yr Project Manager at Initech (product company). Concern: last active 172 days ago.
+CAND_0000039,45,0.0,4yr Marketing Manager at Acme Corp (product company). Concern: limited evidence of production ML/IR experience.
+CAND_0000040,46,0.0,2yr Customer Support at Globex Inc (product company). Concern: last active 122 days ago.
+CAND_0000042,47,0.0,5yr HR Manager at Wayne Enterprises (product company). Concern: last active 222 days ago.
+CAND_0000046,48,0.0,8yr Mechanical Engineer at Hooli (product company). Concern: last active 102 days ago.
+CAND_0000047,49,0.0,2yr Project Manager at TCS (services firm). Concern: majority of career is at services firms.
+CAND_0000049,50,0.0,12yr Mechanical Engineer at Wayne Enterprises (product company). Concern: notice period is 120 days.
