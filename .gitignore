@@ -30,3 +30,7 @@ Thumbs.db
 # Submissions (don't commit final submission)
 submission.csv
 team_*.csv
+
+# Personal working notes (not part of the submission)
+EDGE_CASES.md
+understand_the_pipeline.ipynb
