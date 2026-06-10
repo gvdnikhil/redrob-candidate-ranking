@@ -35,6 +35,19 @@ def _parse_date(s) -> date | None:
         return None
 
 
+def _num(redrob: dict, key: str) -> float | None:
+    """
+    Read a numeric signal, treating missing / null / negative values as
+    unknown. The platform uses -1 as a "no data" sentinel (confirmed for
+    github_activity_score and offer_acceptance_rate); absence of history
+    must stay NEUTRAL, never count for or against the candidate.
+    """
+    v = redrob.get(key)
+    if v is None or not isinstance(v, (int, float)) or v < 0:
+        return None
+    return v
+
+
 def compute_availability(redrob: dict) -> float:
     """
     Compute availability multiplier from redrob_signals dict.
@@ -58,48 +71,53 @@ def compute_availability(redrob: dict) -> float:
         m += 0.10
 
     # ---- Recruiter response rate --------------------------------------
-    rrr = redrob.get("recruiter_response_rate", 0.3)
-    if rrr < RESPONSE_RATE_LOW:
-        m -= 0.20
-    elif rrr >= RESPONSE_RATE_HIGH:
-        m += 0.08
+    rrr = _num(redrob, "recruiter_response_rate")
+    if rrr is not None:
+        if rrr < RESPONSE_RATE_LOW:
+            m -= 0.20
+        elif rrr >= RESPONSE_RATE_HIGH:
+            m += 0.08
 
     # ---- Response time (lower = more engaged) -------------------------
-    avg_rt = redrob.get("avg_response_time_hours", 100)
-    if avg_rt < 12:
-        m += 0.05
-    elif avg_rt > 200:
-        m -= 0.05
+    avg_rt = _num(redrob, "avg_response_time_hours")
+    if avg_rt is not None:
+        if avg_rt < 12:
+            m += 0.05
+        elif avg_rt > 200:
+            m -= 0.05
 
     # ---- Notice period ------------------------------------------------
-    notice = redrob.get("notice_period_days", 60)
-    if notice > NOTICE_LONG:
-        m -= 0.10
-    elif notice <= NOTICE_SHORT:
-        m += 0.08
+    notice = _num(redrob, "notice_period_days")
+    if notice is not None:
+        if notice > NOTICE_LONG:
+            m -= 0.10
+        elif notice <= NOTICE_SHORT:
+            m += 0.08
 
     # ---- Interview completion rate ------------------------------------
-    icr = redrob.get("interview_completion_rate", 0.5)
-    if icr > 0.70:
-        m += 0.05
-    elif icr < 0.40:
-        m -= 0.08
+    icr = _num(redrob, "interview_completion_rate")
+    if icr is not None:
+        if icr > 0.70:
+            m += 0.05
+        elif icr < 0.40:
+            m -= 0.08
 
     # ---- GitHub activity (engineering signal) -------------------------
-    gh = redrob.get("github_activity_score", -1)
-    if gh > 20:
+    gh = _num(redrob, "github_activity_score")
+    if gh is not None and gh > 20:
         m += 0.05
 
     # ---- Profile completeness ----------------------------------------
-    pc = redrob.get("profile_completeness_score", 50)
-    if pc >= 80:
-        m += 0.03
-    elif pc < 40:
-        m -= 0.05
+    pc = _num(redrob, "profile_completeness_score")
+    if pc is not None:
+        if pc >= 80:
+            m += 0.03
+        elif pc < 40:
+            m -= 0.05
 
     # ---- Saved by recruiters (demand signal) -------------------------
-    saved = redrob.get("saved_by_recruiters_30d", 0)
-    if saved >= 10:
+    saved = _num(redrob, "saved_by_recruiters_30d")
+    if saved is not None and saved >= 10:
         m += 0.03
 
     # Clamp to allowed range
