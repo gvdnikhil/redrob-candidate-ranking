@@ -9,8 +9,8 @@ Output: top 100 best-fit candidates with factual reasoning, in under 2 minutes o
 ## Quick Start
 
 ```bash
-# 1. Create venv and install
-py -3 -m venv .venv
+# 1. Create venv and install (Python 3.10-3.12 — torch/pandas pins have no 3.13+ wheels)
+py -3.10 -m venv .venv
 .venv\Scripts\activate        # Windows
 pip install -r requirements.txt
 
@@ -248,13 +248,13 @@ flowchart LR
 
 ## Performance
 
+Measured on Windows 11 Home, Python 3.10.11, CPU only, 16 GB RAM:
+
 | Step | Time |
 |------|------|
-| Precompute 100k (Phase A) | ~3.5 min |
-| Load artifacts | 1.2s |
-| Dense + BM25 + RRF scoring | 1.7s |
-| Composite scoring 100k | ~101s |
-| Reasoning + CSV write | ~1s |
-| **Total rank.py** | **~1 min 53 sec** |
+| Precompute 100k (Phase A) | 217s (~3.6 min) |
+| Total rank.py (Phase B) | 118s (~2 min) |
 
-Budget constraint: 5 min wall-clock. Actual: under 2 min.
+Budget constraint: 5 min wall-clock for the ranking step. Actual: under 2 min.
+Output is fully deterministic — a clean environment rebuild reproduces the
+submission CSV exactly (100/100 identical ranks).

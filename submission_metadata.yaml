@@ -8,7 +8,7 @@ primary_contact:
   email: "gangulreddy@deloitte.com"
   phone: "FILL_YOUR_PHONE"
 
-github_repository_url: "https://github.com/FILL_USERNAME/FILL_REPO_NAME"
+github_repository_url: "https://github.com/gvdnikhil/redrob-candidate-ranking"
 
 sandbox_demo_link: "FILL_AFTER_COLAB_NOTEBOOK_PUBLISHED"
 
@@ -16,9 +16,9 @@ ai_tools_declared:
   - Claude   # used for development workflow (Claude Code CLI)
 
 compute_environment:
-  summary: "Windows 11 Enterprise, Python 3.14, CPU only, 16GB RAM"
-  precompute_runtime_sec: 210
-  rank_runtime_sec: 113
+  summary: "Windows 11 Home, Python 3.10.11, CPU only, 16GB RAM"
+  precompute_runtime_sec: 217
+  rank_runtime_sec: 118
 
 team_members:
   - name: "Gangula Venkata Durga Nikhil Reddy"

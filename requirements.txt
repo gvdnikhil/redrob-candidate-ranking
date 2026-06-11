@@ -5,7 +5,9 @@ pyarrow==24.0.0
 orjson==3.10.3
 
 # Embeddings & retrieval
-sentence-transformers==3.0.1
+# NOTE: >=3.2 required — StaticEmbedding (used by static-retrieval-mrl-en-v1)
+# does not exist in 3.0.x
+sentence-transformers==3.3.1
 torch==2.3.1
 transformers==4.41.2
 tokenizers==0.19.1
